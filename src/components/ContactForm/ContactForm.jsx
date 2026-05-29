@@ -1,9 +1,9 @@
-import React from 'react';
+import './ContactForm.css'; // CSS File link
 
 function ContactForm() {
   return (
     <div>
-      {/* Teammate: Build your Contact Form here! */}
+      {/* Build your Contact Form here! */}
     </div>
   );
 }
