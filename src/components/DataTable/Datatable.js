@@ -8,6 +8,8 @@ function DataTable() {
 <p>Below is a comparative table of major planets in our solar system. The data highlights key physical properties used by astronomers and researchers worldwide.
   <br>
   <br>
+  </br>
+  <p class ="dark">
   Data about the planets of our solar system(Planetary facts taken from NASA)
 </p>
   <table border="1">
