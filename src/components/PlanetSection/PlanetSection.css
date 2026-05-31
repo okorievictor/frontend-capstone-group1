@@ -1,41 +1,66 @@
 .planet-section {
-  max-width: 960px;
+  background-color: #f0f4ff;
+  padding: 80px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.planet-section-content {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+}
+
+.planet-section-heading {
+  color: #0055ff;
   text-align: center;
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
-.section-title {
-  color: #1a3a8f;
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.section-subtitle {
-  color: #444;
-  font-size: 0.95rem;
-  max-width: 580px;
-  margin: 0 auto 32px;
+.planet-section-description {
+  color: #555555;
+  text-align: center;
+  font-size: 1.125rem;
   line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 48px auto;
+}
+
+.planet-section-status {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #333333;
+  margin: 40px 0;
+}
+
+.planet-section-status.error {
+  color: #d32f2f;
 }
 
 .planet-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 32px;
 }
 
-/* Responsive: 2 columns on tablet */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .planet-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 }
 
-/* Responsive: 1 column on mobile */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .planet-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .planet-section-heading {
+    font-size: 2rem;
+  }
+
+  .planet-section {
+    padding: 60px 20px;
   }
 }
