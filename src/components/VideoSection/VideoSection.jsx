@@ -38,7 +38,7 @@ const VideoSection = () => {
           >
             <video
               ref={videoRef}
-              src="/planet_video.mp4"
+              src="/planet-video.mp4"
               autoPlay
               muted
               loop
