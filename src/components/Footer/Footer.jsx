@@ -1,33 +1,44 @@
-import '.Footer.css';
-function Footer() {
+import React from 'react';
+import './Footer.css';
+
+const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-about">
-        <h3>About Us</h3>
-        <p>
-          We are a team of frontend developers from 
-          TS Academy Frontend Development course — Group 1.
-        </p>
-      </div>
+    <footer className="footer-section">
+      <div className="footer-container">
 
-      <div className="footer-links">
-        <a href="https://amakandukwu.com/" target="_blank" rel="noreferrer">
-          Amaka
-        </a>
-        <a href="https://www.linkedin.com/in/ifeomaokocha" target="_blank" rel="noreferrer">
-          Ifeoma
-        </a>
-        <a href="https://tsacademyonline.com/" target="_blank" rel="noreferrer">
-          TSacademy
-        </a>
-        <a href="https://github.com/okorievictor/frontend-capstone-group1" target="_blank" rel="noreferrer">
-          Group 1
-        </a>
-      </div>
+        <div className="footer-top">
+          <h4 className="footer-heading">About</h4>
+          <p className="footer-names">
+            Victor, Joshua Unekwu, Gift, Dike, Believe-God, Joshua Iheanacho, Daniel
+          </p>
+        </div>
 
-      <p className="footer-copy">&copy; 2026 Group 1. All rights reserved.</p>
+        <div className="footer-divider"></div>
+
+        <div className="footer-bottom">
+          <div className="footer-copyright">
+            <p className="footer-copyright-line">
+              ©2026 Design by{' '}
+              <a href="https://github.com/Anurella" target="_blank" rel="noopener noreferrer" className="footer-link">Amaka</a>
+              {' '}&{' '}
+              <a href="https://www.linkedin.com/in/ifeomaokocha" target="_blank" rel="noopener noreferrer" className="footer-link">Ifeoma A.</a>
+            </p>
+            <p className="footer-copyright-line">
+              Built by{' '}
+              <a href="https://github.com/okorievictor/frontend-capstone-group1" target="_blank" rel="noopener noreferrer" className="footer-link">Group1</a>. All rights reserved
+            </p>
+          </div>
+
+          <div className="footer-brand">
+            <a href="https://tsacademyonline.com/" target="_blank" rel="noopener noreferrer" className="footer-link-large">
+              TSAcademy
+            </a>
+          </div>
+        </div>
+
+      </div>
     </footer>
   );
-}
+};
 
 export default Footer;

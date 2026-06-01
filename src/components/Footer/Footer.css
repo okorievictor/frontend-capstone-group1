@@ -1,65 +1,113 @@
-[01/06/2026 01:53] Gift: function Footer() {
-  return (
-    <footer className="footer">
-      <div className="footer-about">
-        <h3>About Us</h3>
-        <p>
-          We are a team of frontend developers from 
-          TS Academy Frontend Development course — Group 1.
-        </p>
-      </div>
-
-      <div className="footer-links">
-        <a href="https://amakandukwu.com/" target="_blank" rel="noreferrer">
-          Amaka
-        </a>
-        <a href="https://www.linkedin.com/in/ifeomaokocha" target="_blank" rel="noreferrer">
-          Ifeoma
-        </a>
-        <a href="https://tsacademyonline.com/" target="_blank" rel="noreferrer">
-          TSacademy
-        </a>
-        <a href="https://github.com/okorievictor/frontend-capstone-group1" target="_blank" rel="noreferrer">
-          Group 1
-        </a>
-      </div>
-
-      <p className="footer-copy">&copy; 2026 Group 1. All rights reserved.</p>
-    </footer>
-  );
-}
-
-export default Footer;
-[01/06/2026 01:57] Gift: .footer {
-  background-color: #0a0a0a;
+.footer-section {
+  background-color: #051540;
   color: #ffffff;
-  padding: 40px 20px;
-  text-align: center;
+  padding: 40px 60px;
+  font-family: 'Inter', sans-serif;
 }
 
-.footer-about {
-  max-width: 600px;
-  margin: 0 auto 20px;
-}
-
-.footer-links {
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 20px;
 }
 
-.footer-links a {
-  color: #a78bfa;
-  text-decoration: none;
+.footer-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #ffffff;
 }
 
-.footer-links a:hover {
+.footer-names {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #c0ccdf;
+  margin: 0;
+}
+
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 20px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-copyright-line {
+  font-size: 1rem;
+  color: #c0ccdf;
+  font-weight: 400;
+  margin: 0;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #6da2fc;
   text-decoration: underline;
 }
 
-.footer-copy {
-  font-size: 0.85rem;
-  color: #888;
+.footer-brand {
+  display: flex;
+  align-items: center;
+}
+
+.footer-link-large {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link-large:hover {
+  color: #6da2fc;
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .footer-section {
+    padding: 30px 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .footer-brand {
+    margin-top: 4px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .footer-section {
+    padding: 50px 80px;
+  }
 }
