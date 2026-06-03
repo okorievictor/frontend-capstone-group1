@@ -2,13 +2,18 @@ import React, { useState, useRef, useEffect } from "react";
 import "./VideoSection.css";
 
 const VideoSection = () => {
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
 
   useEffect(() => {
     if (videoRef.current) {
-      if (videoRef.current.paused) {
-        setIsPlaying(false);
+      const videoElement = videoRef.current;
+      const playPromise = videoElement.play();
+
+      if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(() => {
+          setIsPlaying(false);
+        });
       }
     }
   }, []);
@@ -28,7 +33,7 @@ const VideoSection = () => {
   const handlePause = () => setIsPlaying(false);
 
   return (
-    <section className="video-section">
+    <section className="video-section" data-reveal>
       <div className="video-section-content">
         <div className="video-container">
           <div
@@ -39,13 +44,19 @@ const VideoSection = () => {
             <video
               ref={videoRef}
               src="/planet-video.mp4"
-              autoPlay
               muted
               loop
               playsInline
+              autoPlay
               className="video-element"
               onPlay={handlePlay}
               onPause={handlePause}
+              onLoadedMetadata={() => {
+                const playPromise = videoRef.current?.play();
+                if (playPromise && typeof playPromise.catch === "function") {
+                  playPromise.catch(() => setIsPlaying(false));
+                }
+              }}
             />
 
             <div

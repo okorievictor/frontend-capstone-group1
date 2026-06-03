@@ -40,7 +40,7 @@ const PlanetSection = () => {
   }, []);
 
   return (
-    <section id="planets" className="planet-section">
+    <section id="planets" className="planet-section" data-reveal>
       <div className="planet-section-content">
         <h2 className="planet-section-heading">Visualizing the Differences Between Planets</h2>
         <p className="planet-section-description">

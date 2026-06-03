@@ -3,7 +3,7 @@ import './Hero.css'; // CSS File link
 
 function Hero() {
   return (
-    <section className="hero-container">
+    <section className="hero-container" data-reveal>
       
       {/* Text and Buttons */}
       <div className="hero-content">

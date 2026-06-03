@@ -79,7 +79,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="contact-section">
+    <section id="contact" className="contact-section" data-reveal>
       <div className="contact-container">
         <h2 className="contact-heading">Have Questions About Planetary Science?</h2>
         <p className="contact-subtext">
@@ -118,7 +118,7 @@ const ContactForm = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className={errors.phone ? 'error-input' : ''}
-                    placeholder="Please enter a valid phone number."
+                    placeholder="Phone number"
                   />
                   {errors.phone && <span className="error-text">{errors.phone}</span>}
                 </div>
@@ -134,7 +134,7 @@ const ContactForm = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className={errors.email ? 'error-input' : ''}
-                    placeholder="example@example.com"
+                    placeholder="Email"
                   />
                   {errors.email && <span className="error-text">{errors.email}</span>}
                 </div>
@@ -149,7 +149,7 @@ const ContactForm = () => {
                     className={errors.message ? 'error-input' : ''}
                     maxLength={100}
                     rows={1}
-                    placeholder="Enter your message"
+                    placeholder="Message"
                   />
                   <div className="message-footer">
                     <span className="char-counter">100 characters</span>
@@ -163,7 +163,7 @@ const ContactForm = () => {
 
             <div className="form-actions">
               <button type="submit" className="submit-button" disabled={isSubmitting}>
-                {isSubmitting ? 'Sending...' : 'Submit >'}
+                {isSubmitting ? 'Sending...' : 'Submit'}
               </button>
             </div>
           </form>

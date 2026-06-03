@@ -1,5 +1,6 @@
 import React from 'react';
 import './PlanetCard.css';
+import heroPlanetsImage from '../../assets/hero-planets.png';
 
 const PlanetCard = ({ name, distanceFromSun, image }) => {
   return (
@@ -8,7 +9,12 @@ const PlanetCard = ({ name, distanceFromSun, image }) => {
         src={image}
         alt={`Image of the planet ${name}`}
         className="planet-image"
-        onError={(e) => { e.target.onerror = null; e.target.src = "/hero-planet.png"; }}
+        loading="lazy"
+        decoding="async"
+        onError={(event) => {
+          event.currentTarget.onerror = null;
+          event.currentTarget.src = heroPlanetsImage;
+        }}
       />
       <figcaption className="planet-caption">
         <p className="planet-name">{name}</p>
