@@ -1,4 +1,9 @@
 
+/* Smooth scrolling for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Global Reset & Base Styles */
 * {
   box-sizing: border-box;

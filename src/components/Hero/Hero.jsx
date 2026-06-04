@@ -1,7 +1,13 @@
-
 import './Hero.css'; // CSS File link
 
 function Hero() {
+  const scrollToSection = (sectionId) => {
+    const target = document.getElementById(sectionId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section className="hero-container" data-reveal>
       
@@ -13,8 +19,8 @@ function Hero() {
         </p>
         
         <div className="button-group">
-          <button className="btn btn-primary">Explore the Data</button>
-          <button className="btn btn-secondary">Contact Us</button>
+          <button className="btn btn-primary" onClick={() => scrollToSection('planets')}>Explore the Data</button>
+          <button className="btn btn-secondary" onClick={() => scrollToSection('contact')}>Contact Us</button>
         </div>
       </div>
 

@@ -30,14 +30,14 @@ const Footer = () => {
       <div className="footer-container footer-container--updated">
         <div className="footer-top">
           <h4 className="footer-heading">About</h4>
-          <p className="footer-names">first name of group members</p>
+          <p className="footer-names">Victor, Joshua Unekwu, Gift, Dike, Believe-God, Joshua Iheanacho, Daniel</p>
         </div>
 
         <div className="footer-divider"></div>
 
         <div className="footer-bottom">
           <p className="footer-copyright-line">
-            ©2026 Design by Amaka &amp; Ifeoma A. Built by GroupName. All rights reserved
+            ©2026 Design by Amaka &amp; Ifeoma A. Built by Group1. All rights reserved
           </p>
           <div className="footer-brand">
             <span className="footer-link-large">TSAcademy</span>
