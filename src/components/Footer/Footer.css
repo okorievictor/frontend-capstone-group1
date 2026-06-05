@@ -99,6 +99,13 @@
   margin: 0;
 }
 
+@media (min-width: 1025px) {
+  .footer-names {
+    white-space: nowrap;
+    max-width: none;
+  }
+}
+
 .footer-divider {
   width: 100%;
   height: 1px;
