@@ -30,7 +30,7 @@ const Footer = () => {
       <div className="footer-container footer-container--updated">
         <div className="footer-top">
           <h4 className="footer-heading">About</h4>
-          <p className="footer-names">Victor, Joshua Unekwu, Loveth, Gift, Dike, Believe-God, Joshua Iheanacho, Daniel, Eunice </p>
+          <p className="footer-names">Victor, Joshua Unekwu, Loveth, Gift, Dike, Believe-God, Joshua Iheanacho, Bolarinwa, Daniel, Eunice </p>
         </div>
 
         <div className="footer-divider"></div>

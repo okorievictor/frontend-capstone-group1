@@ -25,10 +25,11 @@ This application recreates a provided mockup as a fully working React web app. I
 | Joshua Unekwu | [GitHub](https://github.com/Joshda-Major) | **Assistant Group Leader** — Header & Hero Component |
 | Loveth O. Obiajulu | [GitHub](https://github.com/Logeri29) | PlanetSection Component |
 | Edosomwan O. Gift | [GitHub](https://github.com/gift2354) | Footer Styling |
-| Euince Nwede | [GitHub](https://github.com/eunicenwede04) | Contact Form — Structure & Styling |
+| Euince Nwede | [GitHub](https://github.com/eunicenwede04) | Contact Form — Structure |
 | Dike Samuel Ikenna | [GitHub](https://github.com/dikeIQ) | DataTable Structure & Styling |
 | Joshua Iheanacho | [GitHub](https://github.com/iheanachojoshua1-lgtm) | Final UI Improvements |
-
+| Daniel | [GitHub](https://github.com/Danstringz) | DataTable - Styling |
+| Bolarinwa | [GitHub](https://github.com/Femibliss) |  |
 ---
 
 ## Components & Contributors
@@ -38,7 +39,7 @@ This application recreates a provided mockup as a fully working React web app. I
 | `Header & Hero` | `src/components/Header/` | Sticky navigation bar with Planet Creative World logo and Landing section with heading, description and two CTA buttons that scroll to their target sections |  Joshua Unekwu |
 | `VideoSection` | `src/components/VideoSection/` | Two-column section with an HTML5 autoplay video and descriptive text | Okorie Victor |
 | `PlanetSection & PlanetCard` | `src/components/PlanetSection/ & src/components/PlanetCard/` | Fetches planet data from the API and renders a responsive grid of PlanetCard components and Reusable `<figure>` card displaying a planet image, name and distance from the sun| Loveth O. Obiajulu |
-| `DataTable` | `src/components/DataTable/` | NASA comparative planetary facts table with grouped planet categories | Dike Samuel Ikenna|
+| `DataTable` | `src/components/DataTable/` | NASA comparative planetary facts table with grouped planet categories | Dike Samuel Ikenna & Daniel|
 | `ContactForm` | `src/components/ContactForm/` | Validated contact form with POST submission and success message | Euince Nwede |
 | `Footer` | `src/components/Footer/` | About section with team names, links to contributors and TSAcademy | Gift |
 
