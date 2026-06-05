@@ -258,9 +258,17 @@
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /* Responsiveness */
@@ -310,6 +318,7 @@
   .hero-description {
     margin-bottom: 28px;
   }
+
   /* Previous implementation of .button-group on mobile (did not center buttons)
   .button-group {
     width: 100%;
@@ -321,7 +330,13 @@
   .button-group {
     width: 100%;
     gap: 12px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
+  }
+
+  .btn {
+    width: auto;
+    flex: 1;
+    max-width: 160.5px;
   }
 }
