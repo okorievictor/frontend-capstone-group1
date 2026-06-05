@@ -1,3 +1,4 @@
+/* Updated to match review corrections
 .hero-container {
   max-width: 1140px;
   height: 620px;
@@ -42,7 +43,6 @@
   text-align: left;
 }
 
-/* Button Styles */
 .button-group {
   display: flex;
   gap: 16px;
@@ -81,7 +81,6 @@
 
 }
 
-/* Image Column Styles */
 .hero-image-wrapper {
   flex: 1;
   display: flex;
@@ -105,7 +104,6 @@
   100% { transform: translateY(0px); }
 }
 
-/* Responsiveness */
 @media (max-width: 900px) {
   .hero-container {
     flex-direction: column-reverse; 
@@ -119,7 +117,7 @@
   .hero-content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the text block contents */
+    align-items: center;
   }
 
   .hero-title {
@@ -149,5 +147,181 @@
     width: auto; 
     padding: 10px 16px;
     font-size: 14px;
+  }
+}
+*/
+
+.hero-container {
+  max-width: 1440px;
+  width: 100%;
+  min-height: 620px;
+  height: auto;
+  margin: 0 auto;
+  padding: 40px 121px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 549px;
+}
+
+.hero-title {
+  width: auto;
+  height: auto;
+  margin: 165px 0 24px;
+  font-size: clamp(3rem, 4vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  text-align: left;
+}
+
+.hero-description {
+  max-width: 534px;
+  margin-bottom: 30px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  color: #aeb8cb;
+  text-align: left;
+}
+
+/* Button Styles */
+.button-group {
+  display: flex;
+  gap: 16.5px;
+}
+
+.btn {
+  width: 160.5px;
+  height: 44px;
+  font-style: semibold;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    opacity 180ms ease;
+}
+
+.btn-primary {
+  background-color: #164BAF;
+  color: white;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 3px;
+}
+
+/* Image Column Styles */
+.hero-image-wrapper {
+  flex: 1;
+  display: flex;
+  padding-top: 0;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.earth-image {
+  max-width: 644px;
+  width: min(644px, 100%);
+  margin-top: 0;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .hero-container {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .hero-title {
+    margin-top: 96px;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    padding-top: 18px;
+    gap: 20px;
+    min-height: auto;
+  }
+
+  .hero-image-wrapper {
+    width: 100%;
+    order: -1;
+    justify-content: center;
+  }
+
+  .earth-image {
+    width: min(68vw, 240px);
+    max-width: 240px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: none;
+    align-items: center;
+  }
+
+  .hero-title {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 2.4rem;
+  }
+
+  .hero-description {
+    margin-bottom: 28px;
+  }
+  /* Previous implementation of .button-group on mobile (did not center buttons)
+  .button-group {
+    width: 100%;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  */
+  /* Updated button-group to center primary buttons horizontally on mobile screens */
+  .button-group {
+    width: 100%;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
