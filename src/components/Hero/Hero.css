@@ -199,10 +199,11 @@
 }
 
 .btn {
-  width: 160.5px;
+  min-width: 160.5px;
+  width: max-content;
   height: 44px;
   font-style: semibold;
-  padding: 10px 20px;
+  padding: 10px 24px;
   border-radius: 6px;
   font-size: 0.95rem;
   font-weight: 600;
@@ -210,6 +211,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
@@ -313,10 +315,12 @@
     margin-top: 0;
     margin-bottom: 18px;
     font-size: 2.4rem;
+    text-align: center;
   }
 
   .hero-description {
     margin-bottom: 28px;
+    text-align: center;
   }
 
   /* Previous implementation of .button-group on mobile (did not center buttons)
