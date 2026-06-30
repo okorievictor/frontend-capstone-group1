@@ -4,7 +4,7 @@ import './ContactForm.css';
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     fullName: '',
-    phone: '',
+    phoneNumber: '',
     email: '',
     message: ''
   });
@@ -36,10 +36,10 @@ const ContactForm = () => {
     } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email format';
     }
-    if (!formData.phone.trim()) {
-      newErrors.phone = 'Phone Number is required';
-    } else if (!/^[\d\s\-\+\(\)]+$/.test(formData.phone) || formData.phone.length < 5) {
-      newErrors.phone = 'Please enter a valid phone number';
+    if (!formData.phoneNumber.trim()) {
+      newErrors.phoneNumber = 'Phone Number is required';
+    } else if (!/^[\d\s\-\+\(\)]+$/.test(formData.phoneNumber) || formData.phoneNumber.length < 5) {
+      newErrors.phoneNumber = 'Please enter a valid phone number';
     }
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
@@ -105,22 +105,24 @@ const ContactForm = () => {
                     onChange={handleChange}
                     className={errors.fullName ? 'error-input' : ''}
                     placeholder="Full name"
+                    required
                   />
                   {errors.fullName && <span className="error-text">{errors.fullName}</span>}
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="phone">Phone Number<span className="required-star">*</span></label>
+                  <label htmlFor="phoneNumber">Phone Number<span className="required-star">*</span></label>
                   <input
                     type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
                     onChange={handleChange}
-                    className={errors.phone ? 'error-input' : ''}
+                    className={errors.phoneNumber ? 'error-input' : ''}
                     placeholder="Phone number"
+                    required
                   />
-                  {errors.phone && <span className="error-text">{errors.phone}</span>}
+                  {errors.phoneNumber && <span className="error-text">{errors.phoneNumber}</span>}
                 </div>
               </div>
 
@@ -135,6 +137,7 @@ const ContactForm = () => {
                     onChange={handleChange}
                     className={errors.email ? 'error-input' : ''}
                     placeholder="Email"
+                    required
                   />
                   {errors.email && <span className="error-text">{errors.email}</span>}
                 </div>
@@ -150,6 +153,7 @@ const ContactForm = () => {
                     maxLength={100}
                     rows={1}
                     placeholder="Message"
+                    required
                   />
                   <div className="message-footer">
                     <span className="char-counter">100 characters</span>

@@ -48,6 +48,7 @@ const VideoSection = () => {
               loop
               playsInline
               autoPlay
+              controls
               className="video-element"
               onPlay={handlePlay}
               onPause={handlePause}
